@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "InnerOuterEval",
+            "request": "launch",
+            "mainClass": "InnerOuterEval",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "NthFibonacci",
+            "request": "launch",
+            "mainClass": "NthFibonacci",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Fibonacci",
+            "request": "launch",
+            "mainClass": "fibonacci.Fibonacci",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
