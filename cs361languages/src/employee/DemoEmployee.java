@@ -4,7 +4,7 @@
 package employee;
 
 /**
- * @author ADD YOUR NAME
+ * @author Donovan Lane
  *
  */
 
@@ -28,39 +28,40 @@ public class DemoEmployee {
 //		PartTimeEmployee pEmp2 = new PartTimeEmployee("Melissa", "Will", "123456666", 23.5);
 
 		// Upcasting
-		Employee emp3 = pEmp1;
+		Employee emp3 = pEmp1;  // Upcasting PartTimeEmployee to Employee
 		System.out.println("emp3");
-		emp3.whoAmI();
-		// TODO To complete
-		// emp3.whoAmI() // prints ... because ...
-		// emp3.getHourlyRate(); // returns syntax error because ...
+		emp3.whoAmI();  // Calls the whoAmI method
 
 		// TODO To complete
-		// Add the condition that test that emp3 is an instance of part time employee at
-		// this time
-		// if (CONDITION) {
-		// System.out.println("emp3 instance of part time employee"); // printed
-		// } else {
-		System.out.println("emp3 not instance of part time employee");
-		// }
+		// emp3.whoAmI() prints PART TIME EMPLOYEE because the method is overridden in PartTimeEmployee.
+		// Even though emp3 is of type Employee, due to polymorphism, the method in the actual object type (PartTimeEmployee) is called.
+		// emp3.getHourlyRate(); returns a syntax error because the method getHourlyRate() belongs to PartTimeEmployee,
+		// and emp3 is now of type Employee, which doesn't have that method.
+
+		// TODO To complete
+		// Add the condition that tests if emp3 is an instance of PartTimeEmployee at this time
+		if (emp3 instanceof PartTimeEmployee) {
+			System.out.println("emp3 instance of part-time employee"); // printed
+		} else {
+			System.out.println("emp3 not instance of part-time employee");
+		}
 
 		// Downcasting 1
 		// TODO Uncomment and run the code
-		// PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
+		PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
 		// TODO To complete
-		// This instruction compiles / does not compile
-		// This instruction returns a ClassCastException at run time
-		// because ...
+		// This instruction compiles, but it returns a ClassCastException at runtime
+		// because emp1 is not an instance of PartTimeEmployee, but it's being downcast to it.
 
 		// Downcasting 2
-		// Requires the use of intanceof to avoid a run time cast exception
+		// Requires the use of instanceof to avoid a runtime cast exception
 		// TODO Look at the solution below
 		if (emp3 instanceof PartTimeEmployee) {
-			System.out.println("emp3 instance of part time employee"); // printed
-			PartTimeEmployee pEmp4 = (PartTimeEmployee) emp3; // cast required
-			System.out.println(pEmp4.getHourlyRate());
+			System.out.println("emp3 instance of part-time employee"); // printed
+			PartTimeEmployee pEmp4 = (PartTimeEmployee) emp3;  // cast required
+			System.out.println(pEmp4.getHourlyRate());  // Access method specific to PartTimeEmployee
 		} else {
-			System.out.println("emp3 not instance of part time employee");
+			System.out.println("emp3 not instance of part-time employee");
 		}
 	}
 }

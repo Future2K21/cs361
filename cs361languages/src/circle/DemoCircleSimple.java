@@ -4,7 +4,7 @@
 package circle;
 
 /**
- * @author cscharff
+ * @author Donovan Lane
  *
  */
 public class DemoCircleSimple {
@@ -18,7 +18,7 @@ public class DemoCircleSimple {
 		ColoredCircle cc = new ColoredCircle();
 		
 		c.draw(); 	// Drawing a Circle... 
-					// draw method from Cicle
+					// draw method from Circle
 		
 		// Upcasting
 		c = cc; 

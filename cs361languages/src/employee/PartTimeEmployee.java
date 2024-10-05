@@ -4,7 +4,7 @@
 package employee;
 
 /**
- * @author cscharff
+ * @author Donovan Lane
  *
  */
 public class PartTimeEmployee extends Employee {

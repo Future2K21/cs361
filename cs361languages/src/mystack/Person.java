@@ -4,7 +4,7 @@
 package mystack;
 
 /**
- * @author cscharff
+ * @author Donovan Lane
  *
  */
 public class Person {

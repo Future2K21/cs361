@@ -4,20 +4,21 @@
 package reflection;
 
 /**
- * @author ADD YOUR NAME 
- *
+ * @author Donovan Lane
  */
 
 // Reflection: https://docs.oracle.com/javase/tutorial/reflect/class/
 
 // Demonstration of Reflection
 
-// Given an object o, we want to know what class corresponds to o, the inheritance chain for o
+// Given an object o, we want to know what class corresponds to o, the inheritance chain for o,
 // and the list of methods of the class
 
 // Complete the code
 
+import circle.ColoredCircle;
 import java.lang.reflect.Method;
+
 
 public class Reflection {
 
@@ -27,7 +28,7 @@ public class Reflection {
 	 */
 	public void correspondingClass(Object o) {
 		if (o == null)
-			throw new IllegalArgumentException("Object passesd is null");
+			throw new IllegalArgumentException("Object passed is null");
 
 		System.out.println("Inspecting class: " + o.getClass().getName());
 	}
@@ -41,11 +42,20 @@ public class Reflection {
 	 */
 	public void inheritanceChain(Object o) {
 		if (o == null)
-			throw new IllegalArgumentException("Object passesd is null");
+			throw new IllegalArgumentException("Object passed is null");
 
-		// TODO To complete
-		// You need to use the EXACT format of the output
-		// Hint: Use the method getSuperClass()
+		System.out.print("Inheritance chain: ");
+		Class<?> currentClass = o.getClass();
+
+		// Traversing the inheritance chain
+		while (currentClass != null) {
+			System.out.print(currentClass.getName());
+			currentClass = currentClass.getSuperclass();
+			if (currentClass != null) {
+				System.out.print(" inherits from ");
+			}
+		}
+		System.out.println();
 	}
 	
 	/**
@@ -54,15 +64,16 @@ public class Reflection {
 	 */
 	public void listMethods(Object o) {
 		if (o == null)
-			throw new IllegalArgumentException("Object passesd is null");
+			throw new IllegalArgumentException("Object passed is null");
 
-		Method[] m = o.getClass().getMethods();
+		Method[] methods = o.getClass().getMethods();
 
 		// List of methods
-		// TODO To complete
-		// Print each method on one line
-		// Use this EXACT format
-		System.out.println("\n");
+		System.out.println("List of methods:");
+		for (Method method : methods) {
+			System.out.println(method.getName());
+		}
+		System.out.println(); // Add a line for separation
 	}
 
 	/**
@@ -77,13 +88,21 @@ public class Reflection {
 	 */
 	public static void main(String[] args) {
 
-		Reflection r = new Reflection();		
-		
-		// Demonstration of the methods on an objet of type String
-		// TODO To complete
-		
-		// Demonstration of the methods on an objet of type ColoredCircle
-		// TODO To complete		
+		Reflection r = new Reflection();
+
+		// Demonstration of the methods on an object of type String
+		String str = "Hello Reflection";
+		System.out.println("### Reflection on a String object ###");
+		r.correspondingClass(str);           // Print the class of String object
+		r.inheritanceChain(str);             // Print the inheritance chain for String
+		r.listMethods(str);                  // Print the list of methods for String object
+
+		// Demonstration of the methods on an object of type ColoredCircle
+		ColoredCircle cc = new ColoredCircle();
+		System.out.println("### Reflection on a ColoredCircle object ###");
+		r.correspondingClass(cc);            // Print the class of ColoredCircle object
+		r.inheritanceChain(cc);              // Print the inheritance chain for ColoredCircle
+		r.listMethods(cc);                   // Print the list of methods for ColoredCircle object
 	}
 
 }

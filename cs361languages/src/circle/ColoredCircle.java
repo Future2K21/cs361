@@ -4,7 +4,7 @@
 package circle;
 
 /**
- * @author cscharff
+ * @author Donovan Lane
  *
  */
 public class ColoredCircle extends Circle {
@@ -19,6 +19,8 @@ public class ColoredCircle extends Circle {
 
 	@Override
 	void moveTo(int newX, int newY) {
+		this.centerX = newX;
+		this.centerY = newY;
 	}
 	
 	// overridden method from Circle

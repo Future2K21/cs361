@@ -4,7 +4,7 @@
 package circle;
 
 /**
- * @author cscharff
+ * @author Donovan Lane
  *
  */
 

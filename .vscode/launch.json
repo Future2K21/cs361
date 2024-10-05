@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "DemoCircle",
+            "request": "launch",
+            "mainClass": "circle.DemoCircle",
+            "projectName": "cs361languages"
+        },
+        {
+            "type": "java",
+            "name": "DemoCircleSimple",
+            "request": "launch",
+            "mainClass": "circle.DemoCircleSimple",
+            "projectName": "cs361languages"
+        },
+        {
+            "type": "java",
+            "name": "DemoEmployee",
+            "request": "launch",
+            "mainClass": "employee.DemoEmployee",
+            "projectName": "cs361languages"
+        },
+        {
+            "type": "java",
+            "name": "MyStack",
+            "request": "launch",
+            "mainClass": "mystack.MyStack",
+            "projectName": "cs361languages"
+        },
+        {
+            "type": "java",
+            "name": "Reflection",
+            "request": "launch",
+            "mainClass": "reflection.Reflection",
+            "projectName": "cs361languages"
+        },
+        {
+            "type": "java",
+            "name": "Swap",
+            "request": "launch",
+            "mainClass": "cs361memory.Swap",
+            "projectName": "cs361memory"
+        },
+        {
+            "type": "java",
+            "name": "Factorial",
+            "request": "launch",
+            "mainClass": "cs361recursion.Factorial",
+            "projectName": "cs361recursion"
+        },
+        {
+            "type": "java",
+            "name": "Fibonacci",
+            "request": "launch",
+            "mainClass": "cs361recursion.Fibonacci",
+            "projectName": "cs361recursion"
+        },
+        {
+            "type": "java",
+            "name": "InnerOutermostEval",
+            "request": "launch",
+            "mainClass": "cs361recursion.InnerOutermostEval",
+            "projectName": "cs361recursion"
+        }
+    ]
+}
