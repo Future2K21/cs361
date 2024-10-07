@@ -48,7 +48,7 @@ public class DemoEmployee {
 
 		// Downcasting 1
 		// TODO Uncomment and run the code
-		PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
+		// PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
 		// TODO To complete
 		// This instruction compiles, but it returns a ClassCastException at runtime
 		// because emp1 is not an instance of PartTimeEmployee, but it's being downcast to it.
